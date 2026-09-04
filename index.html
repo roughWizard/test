@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroSense</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  </head>
+  <body>
+    <h1>MicroSense</h1>
+    
+    <div>
+      <button id="connectButton">Connect to Micro:bit</button>
+    </div>
+
+    <div id="connected" hidden>
+      <div>Select Sensor:</div>
+
+      <div>
+        <label for="sensorTypeDropdown0">Channel 0: </label>
+        <select id="sensorTypeDropdown0"></select>
+      </div>
+      <div>
+        <label for="sensorTypeDropdown1">Channel 1: </label>
+        <select id="sensorTypeDropdown1"></select>
+      </div>
+      <div>
+        <label for="sensorTypeDropdown2">Channel 2: </label>
+        <select id="sensorTypeDropdown2"></select>
+      </div>
+      
+      <div>
+        <button id="recordDataButton" disabled>Start Recording</button>
+        <button id="stopRecordingButton" disabled>Stop Recording</button>
+        <button id="downloadDataButton" disabled>Download Data</button>
+      </div>
+
+      <div>
+        <label for="samplingRateInput">Enter Sampling Rate (ms): </label>
+        <input type="number" id="samplingRateInput" placeholder="ms">
+        <button id="sendSamplingRateButton">Send Sampling Rate</button>
+      </div>
+
+      <div id="chart_div0" class="chart"></div>
+      <div id="chart_div1" class="chart"></div>
+      <div id="chart_div2" class="chart"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
